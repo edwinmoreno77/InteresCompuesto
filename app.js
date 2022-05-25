@@ -2,7 +2,9 @@
 let calcular = document.querySelector('#calcular');
 const divResultado = document.querySelector('.resultado');
 
-calcular.addEventListener('click', () => {
+calcular.addEventListener('click', (event) => {
+
+  console.log(event);
   let capital = document.querySelector('#capital').value;
   let meses = document.querySelector('#meses').value;
   let interes = document.querySelector('#interes').value;
@@ -23,7 +25,7 @@ calcular.addEventListener('click', () => {
 
     const crearHtml = () => {
 
-      const p = `<p class="p-3 m-2 aling-item-center"><b>${'mes '}${i}${' = '}${capital}</b></p>`;
+      const p = `<p class="p-3 m-2 aling-item-center"><b>${'mes/año '}${i}${' = '}${capital}</b></p>`;
 
       const div = document.createElement('div');
       div.innerHTML = p;
