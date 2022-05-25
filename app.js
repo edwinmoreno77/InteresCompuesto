@@ -2,9 +2,8 @@
 let calcular = document.querySelector('#calcular');
 const divResultado = document.querySelector('.resultado');
 
-calcular.addEventListener('click', (event) => {
+calcular.addEventListener('click', () => {
 
-  console.log(event);
   let capital = document.querySelector('#capital').value;
   let meses = document.querySelector('#meses').value;
   let interes = document.querySelector('#interes').value;
