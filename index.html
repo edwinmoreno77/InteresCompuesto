@@ -14,14 +14,23 @@
 <body class="bg-dark">
     <div class="container">
         <h1 class="my-5 text-center text-white">Interes Compuesto</h1>
+        <p class="text-white text-center">Puede hacer un estimado del interes compuesto de su inversion en un marco de
+            tiempo basado
+            en años o
+            meses.</p>
         <div class="text-center">
             <form id="interesCompuesto" action="" class="text-center bg-success p-5 text-white m-5">CALCULAR INTERES
                 COMPUESTO
                 <br>
+                <br>
+                <label for="">Capital</label>
                 <input id="capital" type="number" placeholder="Capital Inicial">
-                <input id="meses" type="number" placeholder="Meses">
-                <input id="interes" type="number" placeholder="Interes">
-                <input id="deposito" type="number" placeholder="Deposito mensual">
+                <label for="">Tiempo</label>
+                <input id="meses" type="number" placeholder="Meses/Años">
+                <label for="">Interes %</label>
+                <input id="interes" type="number" placeholder="% Mensual/Anual">
+                <label for="">Deposito</label>
+                <input id="deposito" type="number" placeholder="Mensual/Anual">
                 <br>
                 <br>
                 <button id="calcular" class="btn btn-primary my-3" type="button"'>Calcular</button>
