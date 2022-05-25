@@ -1,6 +1,6 @@
 
 let calcular = document.querySelector('#calcular');
-const resultado = document.querySelector('textarea');
+const divResultado = document.querySelector('.resultado');
 
 calcular.addEventListener('click', () => {
   let capital = document.querySelector('#capital').value;
@@ -21,35 +21,21 @@ calcular.addEventListener('click', () => {
     capital = Math.round(capital);
     capital = capital / 100;
 
-    resultado.innerText = 'mes ' + i + ' = ' + capital;
+    const crearHtml = () => {
 
-    console.log('Mes ' + i + ' = ' + capital);
+      const p = `<p class="p-3 m-2 aling-item-center"><b>${'mes '}${i}${' = '}${capital}</b></p>`;
+
+      const div = document.createElement('div');
+      div.innerHTML = p;
+
+      divResultado.append(div)
+
+      return div
+    }
+
+    crearHtml()
   }
 
 })
 
 
-// ----------------------------------------------------------
-
-
-// Algoritmo para calcular ganancias con interes compuesto.
-
-// let a;  // Capital Inicial = a           dolares $.
-// let b;  // meses = b                     tiempo en meses.
-// let c;  // interes compuesto = c         % mensual.
-// let d;  // deposito mensual = d          Ahorros mensuales reinvertidos.
-
-// function interesCompuesto(a, b, c, d) {
-
-//   for (let i = 1; i <= b; i++) {
-
-//     a += ((c / 100) * a) + d;
-//     a = a * 100;
-//     a = Math.round(a);
-//     a = a / 100;
-
-
-//     console.log('Mes ' + i + ' = ' + a + ' $');
-//   }
-// }
-// interesCompuesto();
