@@ -1,6 +1,7 @@
 
 let calcular = document.querySelector('#calcular');
-const divResultado = document.querySelector('.resultado');
+let restaurar = document.querySelector('#restaurar');
+const divResultado = document.querySelector('#resultado');
 
 calcular.addEventListener('click', () => {
 
@@ -27,6 +28,7 @@ calcular.addEventListener('click', () => {
       const p = `<p class="p-3 m-2 aling-item-center"><b>${'mes/año '}${i}${' = '}${capital}</b></p>`;
 
       const div = document.createElement('div');
+      div.classList.add('divHijo');
       div.innerHTML = p;
 
       divResultado.append(div)
@@ -40,3 +42,9 @@ calcular.addEventListener('click', () => {
 })
 
 
+restaurar.addEventListener('click', () => {
+
+  const divHijo = document.querySelector('.divHijo');
+  divResultado.removeChild(divHijo);
+
+})
