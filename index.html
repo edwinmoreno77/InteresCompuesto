@@ -12,39 +12,60 @@
 </head>
 
 <body class="bg-dark">
-    <div class="container">
-        <h1 class="my-5 text-center text-white">Interes Compuesto</h1>
-        <p class="text-white text-center">Puede hacer un estimado del interes compuesto de su inversion en un marco de
+    <div class="container-fluid bg-dark text-center ">
+        <h1 class="my-5 text-white display-4">Interes Compuesto</h1>
+        <p class="text-white m-5 display-6">Puede hacer un estimado del interes compuesto de su inversion en un
+            marco
+            de
             tiempo basado
             en años o
             meses.</p>
-        <div class="text-center d-flex justify-content-center">
-            <form id="interesCompuesto" action="" class="text-center align-items-center bg-success p-2 text-white m-2">
-                CALCULAR INTERES
-                COMPUESTO
-                <br>
-                <br>
-                <label for="">Capital</label>
-                <input class="m-2 " id="capital" type="number" placeholder="Capital Inicial">
-                <br>
-                <label for="">Tiempo</label>
-                <input class="m-2 " id="meses" type="number" placeholder="Meses/Años">
-                <br>
-                <label for="">Interes %</label>
-                <input class="m-2 " id="interes" type="number" placeholder="% Mensual/Anual">
-                <br>
-                <label for="">Deposito</label>
-                <input class="m-2" id="deposito" type="number" placeholder="Mensual/Anual">
-                <br>
-                <br>
-                <button id="calcular" class="btn btn-primary my-3" type="button"'>Calcular</button>
-                <button id="restaurar" class="btn btn-danger my-3" type="button"'>Restaurar</button>
+        <div class="d-flex justify-content-center">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-5 bg-success p-2 m-2 text-white">
+                    <!-- CALCULADORA -->
+                    <form id="interesCompuesto" class="">
+                        <p class="display-6">CALCULADORA DE INTERES
+                            COMPUESTO</p>
+                        <br>
+                        <br>
+                        <label for="">Capital :</label>
+                        <input class="m-2 shadow" id="capital" type="number" placeholder="Capital Inicial">
+                        <br>
+                        <label for="">Tiempo :</label>
+                        <input class="m-2 shadow" id="meses" type="number" placeholder="Meses/Años">
+                        <br>
+                        <label for="">Interes :</label>
+                        <input class="m-2 shadow " id="interes" type="number" placeholder="% Mensual/Anual">
+                        <br>
+                        <label for="">Deposito:</label>
+                        <input class="m-2 shadow" id="deposito" type="number" placeholder="Mensual/Anual">
+                        <br>
+                        <br>
+                        <button id="calcular" class="btn btn-primary my-3" type="button"'>Calcular</button>
+                            <button id="restaurar" class="btn btn-dark my-3" type="button"'>Restaurar</button>
 
-                <div id="resultado">
-                    <!-- `<p class="p-3 m-2 aling-item-center"><b>...</b></p> -->
+                    </form>
                 </div>
-            </form>
+                <!-- RESULTADO -->
+                <div class="col-12 col-lg-6  bg-success p-2 m-2">
+                    <p class="display-6 text-white">Resultado</p>
+                    <div id="resultado" class="text-white ">
+                        <!-- `<p class="p-3 m-2 aling-item-center"><b>...</b></p> -->
+                    </div>
+                </div>
+            </div>
         </div>
+        <br>
+        <footer>
+            <p class="display-6 text-white m-5 p-5">Las estimaciones para calcular el interes compuesto de su inversion
+                se
+                estan
+                realizando suponiendo que se esta reinvirtiendo mensualmente o anualmente los interes optenidos y que
+                los depositos mensuales se realizan a final de mes o año.</p>
+        </footer>
+        <br>
+        <br>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
