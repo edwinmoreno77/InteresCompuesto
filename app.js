@@ -36,7 +36,7 @@ calcular.addEventListener('click', () => {
       return div
     }
 
-    crearHtml()
+    crearHtml();
   }
 
 })
